@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[paperheight=54mm,paperwidth=90mm,margin=1pt]{geometry}
+\usepackage{tikz}
+\usepackage{xltxtra}
+\setromanfont[Mapping=tex-text]{Economica}
+%\renewcommand*\familydefault{\sfdefault}
+
+%\definecolor{mangaki}{RGB}{224,59,39}
+\definecolor{mangaki}{RGB}{0,0,0}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{tikzpicture}
+\begin{scope}[yshift=2.5cm]
+    \draw[opacity=0.5] node[right=-5mm] {\includegraphics{mangaki}};
+\end{scope}
+\begin{scope}
+    \draw[very thick,mangaki,rounded corners=5mm] (0,-0.7) rectangle ++(6,1.4);
+    \begin{scope}
+        \clip circle (1cm);
+        \draw node {\includegraphics[width=1.9cm]{avatar}};
+    \end{scope}
+    \draw[very thick,mangaki] circle (1cm);
+    \draw node at (3,0) {\fontsize{32}{32}\selectfont Sedeto};
+\end{scope}
+\end{tikzpicture}
+\end{document}

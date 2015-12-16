@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage[paperheight=54mm,paperwidth=86mm,margin=1pt]{geometry}
+\usepackage{tikz}
+\usepackage{xltxtra}
+\setromanfont[Mapping=tex-text]{Economica Bold}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth]{bg}};
+\draw node[right] at (2.4,-2.4) {\fontsize{32}{32}\selectfont Sedeto};
+\end{tikzpicture}
+\end{document}
