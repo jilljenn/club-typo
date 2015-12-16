@@ -1,0 +1,21 @@
+\documentclass{beamer}
+\usepackage{xltxtra}
+\setromanfont[Mapping=tex-text]{Arial Black}
+\let\sfdefault\rmdefault
+\usepackage[french]{babel}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+\usepackage{fancyvrb}
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+
+\begin{document}
+
+\begin{frame}
+\VerbatimInput{meta.md}
+\end{frame}
+
+\centering
+\input{content}
+
+\end{document}
