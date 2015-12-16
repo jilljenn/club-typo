@@ -12,8 +12,9 @@ title: Home
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <span class="post-date">{{ post.date | date_to_string }} - <a href="{{ post.url }}">Voir le code</a></span>
 
+    <a href="{{ post.url }}"><img src="/public/img/{{ post.source }}.jpg" alt="{{ post.title }}" /></a>
     {{ post.content }}
   </div>
   {% endfor %}

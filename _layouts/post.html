@@ -5,7 +5,18 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
+  <img src="/public/img/{{ page.source }}.jpg" alt="{{ page.title }}" />
   {{ content }}
+  {% for file in page.files %}
+
+    {% capture fullpath %}{{ page.source }}/{{ file }}{% endcapture %}
+    <h2>{{ file }}</h2>
+
+    {% highlight latex %}
+    {% include {{ fullpath }} %}
+    {% endhighlight %}
+
+  {% endfor %}
 </div>
 
 <div class="related">
